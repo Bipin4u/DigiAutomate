@@ -68,8 +68,7 @@ def record_log(i, j):
     with open(file, 'w') as fh:
         while log_flag.is_set():  # Loop runs while log_flag is True
             line = process.stdout.readline().decode('utf-8')  # Read line from adb logcat
-            fh.write(line.strip() + '
-')  # Write log line to file
+            fh.write(line.strip())  # Write log line to file
 
 # Function to check video for motion detection
 def VideoCheck(MotionDetectorFlag, Motionloopcount, MotionCount):
@@ -173,10 +172,6 @@ for i in range(len(streamList)):  # Loop through the list of streams
 
     modifyStreamFile()  # Modify the stream file
     automateATSC()  # Automate the ATSC stream selection
-
-    demo = 'HssHsssuuursrsrsrsrsrsressedsesesesdsesssemmmIsse'
-    # for i in demo:
-    #     rc.channelOperation(i)
 
 
 import os
